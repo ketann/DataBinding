@@ -18,6 +18,7 @@ class ShowHideProgressBarActivity : AppCompatActivity() {
     }
 
     private fun hideShowProgressBar() {
+        //here we use apply function because of multiple time prevent binding words.
         binding.apply {
             if (progressBar.visibility == View.GONE)
             {
