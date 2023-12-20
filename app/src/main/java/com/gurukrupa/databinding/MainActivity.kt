@@ -3,7 +3,6 @@ package com.gurukrupa.databinding
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.gurukrupa.databinding.databinding.ActivityMainBinding
@@ -23,6 +22,13 @@ class MainActivity : AppCompatActivity() {
         binding.buttonStart.setOnClickListener {
             gotoNextScreen()
         }
+        binding.buttonDisplayData.setOnClickListener {
+            displayData()
+        }
+    }
+
+    private fun displayData() {
+        startActivity(Intent(this@MainActivity, DisplayDataObjectActivity::class.java))
     }
 
     private fun displayGreeting() {
